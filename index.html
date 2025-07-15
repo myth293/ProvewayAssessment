@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BOGO Offer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="divider-with-text">
+      <span>YAY! It’s BOGO</span>
+    </div>
+
+    <!-- 1 Unit -->
+    <div class="box" onclick="selectBox(this)">
+      <div class="box-header">
+        <div>
+          <input type="radio" name="unit" class="radio" />
+          <span>1 Unit</span>
+          <span class="discount">10% Off</span>
+          <div class="subtext">Standard Price</div>
+        </div>
+        <div class="price">
+          $10.00 USD<br />
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+      <div class="options">
+        <p>#1</p>
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Black</option>
+          <option>White</option>
+          <option>Blue</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 2 Unit - Most Popular -->
+    <div class="box most-popular" onclick="selectBox(this)">
+      <div class="ribbon">MOST POPULAR</div>
+      <div class="box-header">
+        <div>
+          <input type="radio" name="unit" class="radio" />
+          <span>2 Unit</span>
+          <span class="discount">20% Off</span>
+        </div>
+        <div class="price">
+          $18.00 USD<br />
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+      <div class="options">
+        <p>#1</p>
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Black</option>
+          <option>White</option>
+          <option>Blue</option>
+        </select>
+        <p>#2</p>
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Black</option>
+          <option>White</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 3 Unit -->
+    <div class="box" onclick="selectBox(this)">
+      <div class="box-header">
+        <div>
+          <input type="radio" name="unit" class="radio" />
+          <span>3 Unit</span>
+          <span class="discount">30% Off</span>
+        </div>
+        <div class="price">
+          $24.00 USD<br />
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+      <div class="options">
+        <p>#1</p>
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Black</option>
+          <option>White</option>
+          <option>Blue</option>
+        </select>
+        <p>#2</p>
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Black</option>
+          <option>White</option>
+          <option>Blue</option>
+        </select>
+        <p>#3</p>
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Black</option>
+          <option>White</option>
+          <option>Blue</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="footer-row">
+      <div class="free">Free Delivery</div>
+      <div class="total">Total : $18.00 USD</div>
+    </div>
+
+    <button class="add-to-cart">+ Add to Cart</button>
+
+    <div class="powered">© Powered by Pumper</div>
+
+    <script>
+      function selectBox(element) {
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach((box) => {
+          box.classList.remove("active");
+          box.querySelector('input[type="radio"]').checked = false;
+        });
+        element.classList.add("active");
+        element.querySelector('input[type="radio"]').checked = true;
+      }
+    </script>
+  </body>
+</html>
